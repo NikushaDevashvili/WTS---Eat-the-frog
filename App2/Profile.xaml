@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="App2.Profile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+    
+    <Grid Background="#DD2C00">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <RelativePanel>
+            
+        </RelativePanel>
+        <RelativePanel>
+            <Button Name="HamburgerButton"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE700;"
+                    FontSize="25"
+                    Click="HamburgerButton_Click"/>
+            <TextBlock Name="PageName"
+                       RelativePanel.RightOf="HamburgerButton" 
+                       Text="Nick"
+                       FontSize="24"/>
+        </RelativePanel>
+
+        <SplitView Grid.Row="1"
+                   Name="MySplitView"
+                   DisplayMode="Overlay"
+                   OpenPaneLength="250">
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single"
+                         SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="Main">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xE10F;"/>
+                            <TextBlock FontSize="18" Margin="20,0,0,0">Main</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Notepad">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xE104;"/>
+                            <TextBlock FontSize="18" Margin="20,0,0,0">Notepad</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Targets">
+                        <StackPanel Orientation="Horizontal">
+                            
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
+        
+    </Grid>
+</Page>

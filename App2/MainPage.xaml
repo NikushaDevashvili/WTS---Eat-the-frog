@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style TargetType="TextBox" x:Key="UserName" >
+            <Setter Property="SelectionHighlightColor" Value="{ThemeResource SystemControlHighlightAccentBrush}" />
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
+
+        </Style>
+       
+    </Page.Resources>
+    
+    <Grid Background="#DD2C00">
+        <StackPanel Orientation="Vertical" Margin="0,50,0,0">
+            <TextBox Name="UserName" Width="200" Header="Username"/>
+            <TextBox Name="Password" Width="200" Header="Password" InputScope="Password"/>
+            <RelativePanel HorizontalAlignment="Center" Margin="60,30,0,0">
+                <Button Name="Register" Content="Register" Click="Register_Click"/>
+                <Button Name="Login" Content="Login" Click="Login_Click" RelativePanel.RightOf="Register"/>
+            </RelativePanel> 
+            
+        </StackPanel>
+        
+
+    </Grid>
+</Page>
